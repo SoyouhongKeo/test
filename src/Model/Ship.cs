@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BattleShip1
+namespace MyGame
 {
     public class Ship
     {
@@ -90,7 +90,7 @@ namespace BattleShip1
             _tiles = new List<Tile>();
 
             // gets the ship size from the enumarator
-            _sizeOfShip = _shipName;
+            _sizeOfShip = (int) _shipName;
         }
 
         /// <summary>

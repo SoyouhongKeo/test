@@ -2,7 +2,7 @@
 using SwinGameSDK;
 using Microsoft.VisualBasic.CompilerServices;
 
-namespace BattleShip1
+namespace MyGame
 {
     public static class GameResources
     {
@@ -263,28 +263,28 @@ namespace BattleShip1
 
         private static void FreeFonts()
         {
-            Font obj = default(Font);
+            
             foreach (var obj in _Fonts.Values)
                 SwinGame.FreeFont(obj);
         }
 
         private static void FreeImages()
         {
-            Bitmap obj = default(Bitmap);
+            
             foreach (var obj in _Images.Values)
                 SwinGame.FreeBitmap(obj);
         }
 
         private static void FreeSounds()
         {
-            SoundEffect obj = default(SoundEffect);
+           
             foreach (var obj in _Sounds.Values)
                 Audio.FreeSoundEffect(obj);
         }
 
         private static void FreeMusic()
         {
-            Music obj = default(Music);
+           
             foreach (var obj in _Music.Values)
                 Audio.FreeMusic(obj);
         }

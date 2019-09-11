@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualBasic.CompilerServices;
+using SwinGameSDK;
 
-namespace BattleShip1
+namespace MyGame
 {
     public class SeaGrid : ISeaGrid
     {
         private const int _WIDTH = 10;
         private const int _HEIGHT = 10;
 
-        private Tile[,] _GameTiles = new Tile[Width - 1 + 1, Height - 1 + 1];
+        private Tile[,] _GameTiles;
         private Dictionary<ShipName, Ship> _Ships;
         private int _ShipsKilled = 0;
 
@@ -61,9 +62,9 @@ namespace BattleShip1
     /// <param name="x">x coordinate of the tile</param>
     /// <param name="y">y coordiante of the tile</param>
     /// <returns></returns>
-        public TileView get_Item(int x, int y)
+        public TileView this [int x, int y]
         {
-            return _GameTiles[x, y].View;
+            get { return _GameTiles[x, y].View; }
         }
 
         /// <summary>

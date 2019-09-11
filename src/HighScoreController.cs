@@ -4,7 +4,7 @@ using System.IO;
 using SwinGameSDK;
 using Microsoft.VisualBasic.CompilerServices;
 
-namespace BattleShip1
+namespace MyGame
 {
 
     /// <summary>

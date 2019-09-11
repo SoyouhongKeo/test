@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualBasic.CompilerServices;
 
-namespace BattleShip1
+namespace MyGame
 {
     public class Tile
     {

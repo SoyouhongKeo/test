@@ -1,6 +1,6 @@
 ﻿using SwinGameSDK;
 
-namespace BattleShip1
+namespace MyGame
 {
 
     /// <summary>

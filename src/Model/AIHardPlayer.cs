@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BattleShip1
+namespace MyGame
 {
     public class AIHardPlayer : AIPlayer
     {
@@ -140,7 +140,7 @@ namespace BattleShip1
                         }
                 }
             }
-            while ((row < 0 || column < 0 || row >= EnemyGrid.Height || column >= EnemyGrid.Width || (int)EnemyGrid.Item(row, column) != (int)TileView.Sea)); // while inside the grid and not a sea tile do the search
+            while ((row < 0 || column < 0 || row >= EnemyGrid.Height || column >= EnemyGrid.Width || (int)EnemyGrid[row, column] != (int)TileView.Sea)); // while inside the grid and not a sea tile do the search
         }
 
         /// <summary>
@@ -377,7 +377,7 @@ namespace BattleShip1
     /// <param name="column">the column of the targets location</param>
         private void AddTarget(int row, int column)
         {
-            if ((row >= 0 && column >= 0 && row < EnemyGrid.Height && column < EnemyGrid.Width && (int)EnemyGrid.Item(row, column) == (int)TileView.Sea))
+            if ((row >= 0 && column >= 0 && row < EnemyGrid.Height && column < EnemyGrid.Width && (int)EnemyGrid[row, column] == (int)TileView.Sea))
 
                 _Targets.Push(new Target(new Location(row, column), _CurrentTarget.ShotAt));
         }

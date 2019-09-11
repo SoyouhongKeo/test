@@ -11,8 +11,8 @@ using System.Linq;
 using System.Xml.Linq;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic.CompilerServices;
-
-namespace BattleShip1
+using SwinGameSDK;
+namespace MyGame
 {
     static class UtilityFunctions
     {
@@ -137,14 +137,9 @@ namespace BattleShip1
 
                     draw = true;
 
-                    switch (grid.Item(row, col))
+                    switch (grid[row, col])
                     {
-                        case TileView.Ship:
-                            {
-                                draw = false;
-                                break;
-                            }
-
+                    
                         case TileView.Miss:
                             {
                                 if (small)
@@ -164,6 +159,7 @@ namespace BattleShip1
                             }
 
                         case TileView.Sea:
+                           
                         case TileView.Ship:
                             {
                                 if (small)
@@ -324,7 +320,7 @@ namespace BattleShip1
             foreach (Sprite s in _Animations)
             {
                 SwinGame.UpdateSprite(s);
-                if (s.animationHasEnded)
+                if (s.AnimationHasEnded)
                     ended.Add(s);
             }
 

@@ -1,6 +1,10 @@
-﻿namespace BattleShip1
-{
-    static class GameLogic
+﻿using SwinGameSDK;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using Microsoft.VisualBasic;
+
+static class GameLogic
     {
         public static void Main()
         {
@@ -26,4 +30,3 @@
             GameResources.FreeResources();
         }
     }
-}

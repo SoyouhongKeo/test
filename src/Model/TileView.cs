@@ -1,4 +1,4 @@
-﻿namespace BattleShip1
+﻿namespace MyGame
 {
     public enum TileView
     {

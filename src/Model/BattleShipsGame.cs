@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BattleShip1
+namespace MyGame
 {
     public class BattleShipsGame
     {

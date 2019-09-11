@@ -1,7 +1,7 @@
 ﻿using System;
 using SwinGameSDK;
 
-namespace BattleShip1
+namespace MyGame
 {
 
     /// <summary>
@@ -133,7 +133,7 @@ namespace BattleShip1
             foreach (ShipName sn in Enum.GetValues(typeof(ShipName)))
             {
                 int i = default(int);
-                i = Int[sn] - 1;
+                i = ((int)sn) - 1;
                 if (i >= 0)
                 {
                     if ((int)sn == (int)_selectedShip)
@@ -158,7 +158,7 @@ namespace BattleShip1
             foreach (ShipName sn in Enum.GetValues(typeof(ShipName)))
             {
                 int i = default(int);
-                i = Int[sn] - 1;
+                i = ((int)sn) - 1;
 
                 if (UtilityFunctions.IsMouseInRectangle(SHIPS_LEFT, SHIPS_TOP + (i * SHIPS_HEIGHT), SHIPS_WIDTH, SHIPS_HEIGHT))
                     return sn;
